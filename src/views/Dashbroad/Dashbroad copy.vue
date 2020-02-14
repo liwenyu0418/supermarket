@@ -1,0 +1,109 @@
+<template>
+  <div class="home">
+    <el-row :gutter="20">
+      <el-col :span="6">
+        <div class="grid-content bg-purple type-box">
+          <!-- 阿里巴巴矢量图标 -->
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dingdanshu" />
+          </svg>
+          <div class="content">
+            <p class="up">总订单</p>
+            <h4 class="down">102,400</h4>
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple type-box">
+          <!-- 阿里巴巴矢量图标 -->
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-neiye-zongxiaoshoue" />
+          </svg>
+          <div class="content">
+            <p class="up">总销售额</p>
+            <h4 class="down">102,400</h4>
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple type-box">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jinridingdanliang" />
+          </svg>
+          <div class="content">
+            <p class="up">今日订单数</p>
+            <h4 class="down">102,400</h4>
+          </div>
+        </div>
+      </el-col>
+      <el-col :span="6">
+        <div class="grid-content bg-purple type-box">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jinrixiaoshoue" />
+          </svg>
+          <div class="content">
+            <p class="up">今日销售额</p>
+            <h4 class="down">102,400</h4>
+          </div>
+        </div>
+      </el-col>
+    </el-row>
+    <!--1、 报表盒子 -->
+    <div ref="myChart" :style="{width: '1000px', height: '500px'}"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {
+    // 3、挂载的时候调用方法，可以查看报表
+    this.drawLine();
+  },
+  methods: {
+    // 2、定义报表的相关方法
+    drawLine() {
+      // 1、首先要基于准备好的dom，初始化echarts实例
+      let myChart = this.$echarts.init(this.$refs.myChart);
+      //
+      //2、 然后绘制并输出图表
+      myChart.setOption({
+        xAxis: {
+          type: "category",
+          data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+        },
+        yAxis: {
+          type: "value"
+        },
+        series: [
+          {
+            data: [820, 932, 901, 934, 1290, 1330, 1320],
+            type: "line"
+          }
+        ]
+      });
+    }
+  }
+};
+</script>
+
+<style lang="less" scoped>
+.home {
+  .type-box {
+    display: flex;
+    .content {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  .icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 50px;
+  }
+}
+</style>

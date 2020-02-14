@@ -1,0 +1,44 @@
+{
+  "id": "1574723",
+  "name": "Supermarket",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5166325",
+      "name": "订单数",
+      "font_class": "dingdanshu",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "6694861",
+      "name": "今日订单量",
+      "font_class": "jinridingdanliang",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6694866",
+      "name": "今日销售额",
+      "font_class": "jinrixiaoshoue",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "8435438",
+      "name": "内页-总销售额",
+      "font_class": "neiye-zongxiaoshoue",
+      "unicode": "e622",
+      "unicode_decimal": 58914
+    },
+    {
+      "icon_id": "9496435",
+      "name": "销售额",
+      "font_class": "xiaoshoue-copy",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
